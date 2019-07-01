@@ -23,5 +23,3 @@ Object.defineProperty(person, 'salary', {
 console.log(person.salary); // good salary
 
 exports.person = person;
-
-console.log(date.getDate());
