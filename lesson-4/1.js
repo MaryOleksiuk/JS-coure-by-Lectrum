@@ -11,15 +11,17 @@ const person = {};
 // Решение
 
 const date = new Date();
-const currentDate = date.getDay();
-const daysInMonth = 32 - date.getDate();
+const currentDate = date.getDate();
+const daysInCurrentMonth = 32 - currentDate;
 
 Object.defineProperty(person, 'salary', {
   get: function() {
-    return (daysInMonth - currentDate) > 20 ? 'good salary' : 'bad salary';
+    return (daysInCurrentMonth - currentDate) > 20 ? 'good salary' : 'bad salary';
   }
 });
 
 console.log(person.salary); // good salary
 
 exports.person = person;
+
+console.log(date.getDate());
