@@ -10,11 +10,11 @@
  */
 
 // Решение
-function createFibonacciGenerator() {
+let createFibonacciGenerator = () => {
   let rootNumber = 0;
   let nextNumber = 1;
 
-  return function() {
+  return () => {
     let oldRootNumber = rootNumber;
     let oldNextNumber = nextNumber;
 
@@ -23,7 +23,7 @@ function createFibonacciGenerator() {
 
     return rootNumber;
   }
-}
+};
 
 const generateFibonacciNumber = createFibonacciGenerator();
 

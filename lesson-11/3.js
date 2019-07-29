@@ -12,12 +12,12 @@
  */
 
 // Решение
-function createFibonacciGenerator() {
+let createFibonacciGenerator = () => {
   let rootNumber = 0;
   let nextNumber = 1;
 
   return {
-    print: function() {
+    print: () => {
       let oldRootNumber = rootNumber;
       let oldNextNumber = nextNumber;
 
@@ -26,12 +26,12 @@ function createFibonacciGenerator() {
 
       return rootNumber;
     },
-    reset: function() {
+    reset: () => {
       rootNumber = 0;
       nextNumber = 1;
     }
   };
-}
+};
 
 const generator1 = createFibonacciGenerator();
 

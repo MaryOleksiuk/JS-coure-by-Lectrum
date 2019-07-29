@@ -16,10 +16,10 @@
 */
 
 // Решение
-function createNumberGenerator() {
+let createNumberGenerator = () => {
   let usedNumbers = [];
 
-  return function() {
+  return () => {
     let newNumber = Math.floor(Math.random() * 100 + 1);
 
     if(usedNumbers.indexOf(newNumber) !== -1) {
@@ -30,7 +30,7 @@ function createNumberGenerator() {
 
     return newNumber;
   }
-}
+};
 
 
 const TOTAL_ITERATIONS = 101;

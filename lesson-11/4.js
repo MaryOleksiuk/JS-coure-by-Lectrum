@@ -27,11 +27,11 @@
  */
 
 // Решение
-function createLogger() {
+let createLogger = () => {
     let calledFuncArray = [];
 
     return {
-      call: function(func, ...rest) {
+      call: (func, ...rest) => {
         if(typeof func !== 'function') {
           throw new Error('First parameter should be a function');
         }
@@ -47,11 +47,11 @@ function createLogger() {
 
         return result;
       },
-      print: function() {
+      print: () => {
         return calledFuncArray;
       }
     }
-}
+};
 
 const returnIdentity = n => n;
 const sum = (a, b) => a + b;
