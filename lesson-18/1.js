@@ -32,7 +32,7 @@ class DB {
     this.db = new Map();
   }
 
-  static generateId() {
+  generateId() {
     let id;
     id = Math.floor(Math.random() * 10000).toString();
 
@@ -117,12 +117,13 @@ class DB {
     }
 
     if(!this.db.has(id)) {
-      throw new Error('Current user doesnt not exist/')
+      throw new Error('Current user doesnt not exist')
     }
 
     return this.db.delete(id);
   }
 }
+
 const db = new DB();
 
 const person = {
