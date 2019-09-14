@@ -32,8 +32,9 @@ class DB {
     this.db = new Map();
   }
 
-  generateId() {
-    let id = Math.floor(Math.random() * 10000).toString();
+  static generateId() {
+    let id;
+    id = Math.floor(Math.random() * 10000).toString();
 
     return id;
   }
